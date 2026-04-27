@@ -14,6 +14,7 @@ public class StartGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if user presses s load the level scene
         if (Input.GetKey(KeyCode.S))
         {
             SceneManager.LoadScene("Level1");

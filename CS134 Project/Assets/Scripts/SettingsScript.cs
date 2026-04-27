@@ -13,6 +13,7 @@ public class SettingsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if user presses escape settings button dissapears and setting menu appears and cursor becomes unlocked and visible
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             gameObject.SetActive(false);    

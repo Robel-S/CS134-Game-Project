@@ -16,8 +16,10 @@ public class ButtonsPressed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if game is won dont check for buttons pressed
         if (hasWon) return;
 
+        //checks each button to see if the isActivated variable is checked if so adds it to the count
         int count = 0;
         for (int i = 0; i < buttons.Length; i++)
         {
@@ -26,6 +28,8 @@ public class ButtonsPressed : MonoBehaviour
                 count++;
             }
         }
+
+        // displays count of buttons pressed and if count is equal to the number of buttons in the list run Won() method
         gameObject.GetComponent<TextMeshProUGUI>().text = "Buttons Pressed: " + count + "/" + buttons.Length;
         if (count == buttons.Length) Won();
     }
@@ -33,6 +37,8 @@ public class ButtonsPressed : MonoBehaviour
     private void Won()
     {
         hasWon = true;
+
+        //changes text to Mission accomplished and positions it at the center of the screen as well as changing font size etc
         gameObject.GetComponent<TextMeshProUGUI>().text = "MISSION ACCOMPLISHED";
         RectTransform rect = gameObject.GetComponent<RectTransform>();
         rect.anchorMin = new Vector2(0.5f, 0.5f);

@@ -14,6 +14,7 @@ public class SettingsMenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if the user presses escape the setting menu dissapears, button reappears and cursor goes back to being locked and invisble
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -23,6 +24,7 @@ public class SettingsMenuScript : MonoBehaviour
             
         }
     }
+    //if user presses the x button in the setting menu the setting menu dissapears and cursor goes back to being locked and invisible
     public void CloseSettings()
     {
         Cursor.lockState = CursorLockMode.Locked;

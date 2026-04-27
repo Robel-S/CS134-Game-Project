@@ -10,6 +10,7 @@ public class PlayerDeath : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //gets player position and rotation at the start of the game
         startPos = transform.position;
         startRot = transform.rotation;
     }
@@ -18,9 +19,11 @@ public class PlayerDeath : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Respawn"))
         {
+            //if player collides with a lazer sends them to the starting position and rotation
             transform.position = startPos;
             transform.rotation = startRot;
 
+            //stops players momentum on respwan 
             Rigidbody rb = GetComponent<Rigidbody>();
             if (rb != null)
             {

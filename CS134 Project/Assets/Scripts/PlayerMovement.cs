@@ -30,16 +30,20 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //checks if player is on the ground
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, isGround);
 
+        //constantly calls to check user inputs and limit their speed
         MyInput();
         SpeedControl();
 
+        //if grounded sets drag to ground drag else sets it to zero
         if (grounded)
             rb.drag = groundDrag;
         else
             rb.drag = 0;
         
+        //plays footstep audio
         PlayFootsteps();
     }
 
@@ -49,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void MyInput()
     {
+        //get horizonal and vertical input from input method (ex WASD)
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
@@ -68,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
-        //limit velocity
+        //limits velocity
         if(flatVel.magnitude > speed)
         {
             Vector3 limited = flatVel.normalized * speed;
@@ -78,9 +83,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void PlayFootsteps()
     {
-        // Check if player is moving
+        // Checks if player is moving
         bool isMoving = rb.velocity.magnitude > 0.1f;
 
+        //if player is grounded and moving plays footsepts at set intervels else resets interval
         if (grounded && isMoving)
         {
             stepTimer -= Time.deltaTime;
