@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //gets rigidbody and freezes rotation so character isnt constantly spinning when bumping into things
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
