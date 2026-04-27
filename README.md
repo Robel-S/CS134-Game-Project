@@ -3,6 +3,8 @@
 ## 🎮 Overview
 **Gravity Mission** is a 3D puzzle game built in Unity where the player must complete three unique missions inside a futuristic space facility.  
 
+![alt text](start.png)
+
 Each mission challenges a different skill:
 - Spatial awareness
 - Timing and pattern recognition
@@ -27,6 +29,8 @@ The player can complete missions in **any order**, and the game concludes once a
 
 At the start of the game, the player is placed in a central corridor with instructions displayed on the walls.
 
+![Mission Hub](images/mission-info.png)
+
 > “Around you are three rooms. Each contains a challenge. Press all three buttons to complete your mission.”
 
 Each room contains:
@@ -37,6 +41,8 @@ Each room contains:
 ---
 
 ## 🟪 Mission 1 – Hidden Button (Easy)
+
+![Mission 1](mission-1-1.png)
 
 **Objective:**  
 Find and press a hidden button inside the room.
@@ -54,6 +60,8 @@ Locate the hidden button, press it, and return to the main corridor.
 ---
 
 ## 🔷 Mission 2 – Laser Sigil Puzzle (Medium)
+
+![Mission 2](mission-2-1.png)
 
 **Objective:**  
 Match rotating lasers to symbolic shapes.
@@ -75,6 +83,8 @@ Match rotating lasers to symbolic shapes.
 ---
 
 ## 🔴 Mission 3 – Laser Obstacle Course (Hard)
+
+![Mission 3](mission-3-1.png)
 
 **Objective:**  
 Reach the end of a hallway filled with laser traps.
@@ -99,6 +109,8 @@ Reach the end of a hallway filled with laser traps.
 Once all three mission buttons are pressed:
 
 > ✅ **MISSION ACCOMPLISHED**
+
+![Mission accomplished](mission-accomplished.png)
 
 A completion message appears, signaling the end of the game.
 
